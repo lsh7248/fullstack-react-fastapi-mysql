@@ -16,6 +16,7 @@
     "@mui/material": "^5.11.10",
     "@mui/styled-engine-sc": "^5.11.9",
     "@reduxjs/toolkit": "^1.9.3",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
     "eslint": "^8.34.0",
@@ -29,6 +30,7 @@
     "markdown-to-jsx": "^7.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
     "styled-components": "^5.3.6",
     "vite-tsconfig-paths": "^4.0.5"
   },
