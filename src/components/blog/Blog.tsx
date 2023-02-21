@@ -17,16 +17,10 @@ import Footer from './Footer';
 // import post3 from './blog-post.3.md';
 
 const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
+  { title: 'React+Typescript 공부노트', url: '#' },
+  { title: 'Python+Fastapi 공부노트', url: '#' },
+  { title: '서버+DB 공부노트', url: '#' },
+  { title: 'Bigdata + AI 공부노트', url: '#' },
 ];
 
 const mainFeaturedPost = {
@@ -58,7 +52,7 @@ const featuredPosts = [
 ];
 
 // const posts = [post1, post2, post3];
-const posts: string[] = [];
+const posts: Array<string> = [];
 
 const sidebar = {
   title: 'About',
@@ -89,27 +83,24 @@ const theme = createTheme();
 export default function Blog() {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container maxWidth="lg">
-        <Header title="Blog" sections={sections} />
-        <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
-          <Grid container spacing={4}>
-            {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
-            ))}
-          </Grid>
-          <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
-            <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-            />
-          </Grid>
-        </main>
-      </Container>
+      <Header title="성현's 공부노트 블로그" sections={sections} />
+      <main>
+        <MainFeaturedPost post={mainFeaturedPost} />
+        <Grid container spacing={4}>
+          {featuredPosts.map((post) => (
+            <FeaturedPost key={post.title} post={post} />
+          ))}
+        </Grid>
+        <Grid container spacing={5} sx={{ mt: 3 }}>
+          <Main title="From the firehose" posts={posts} />
+          <Sidebar
+            title={sidebar.title}
+            description={sidebar.description}
+            archives={sidebar.archives}
+            social={sidebar.social}
+          />
+        </Grid>
+      </main>
       <Footer
         title="Footer"
         description="Something here to give the footer a purpose!"
