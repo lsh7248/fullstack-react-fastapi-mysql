@@ -1,6 +1,5 @@
-# import os
-import openai
 import os
+import openai
 
 openai.organization = os.environ["OPENAI_ORGANIZATION"]
 openai.api_key = os.environ["OPENAI_API_KEY"]
