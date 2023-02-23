@@ -5,13 +5,14 @@ import os
 import secrets
 from typing import Any, Dict, List, Optional, Union
 
-from pydantic import AnyHttpUrl, BaseSettings, EmailStr, HttpUrl, PostgresDsn, validator
+from pydantic import AnyHttpUrl, EmailStr, HttpUrl, PostgresDsn, validator, BaseSettings
 
 
 class Settings(BaseSettings):
     """
     Config 설정 Class 선언
     """
+
     # OPENAI_KEY
     OPENAI_ORG: str = os.environ["OPENAI_ORGANIZATION"]
     OPENAI_API_KEY: str = os.environ["OPENAI_API_KEY"]
@@ -37,7 +38,7 @@ class Settings(BaseSettings):
     # PROJECT_NAME: str
     # SENTRY_DSN: Optional[HttpUrl] = None
     #
-    # @validator("SENTRY_DSN", pre=True)
+    # @validator("SENTRY_DSN", pre=True)dddd
     # def sentry_dsn_can_be_blank(cls, v: str) -> Optional[str]:
     #     if len(v) == 0:
     #         return None
